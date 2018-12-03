@@ -1,0 +1,33 @@
+# test_getBlockHeight.tavern.yaml
+
+---
+
+test_name: This method returns the information of the node
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Both CurrentBlockHeight and HeaderHash are changing frequently.
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "monitor_nodeStats"
+        params: []
+        id: 1
+
+      method: POST
+      headers:
+        content-type: application/json
+
+    response:
+      status_code: 200
+      body:
+        jsonrpc: "2.0"
+        id: 1
+        result:
+          active: true
+          syncing: true
+          mining: true
+          peers: 1

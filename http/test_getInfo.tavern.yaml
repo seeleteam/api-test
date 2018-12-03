@@ -1,0 +1,33 @@
+# test_getInfo.tavern.yaml
+
+---
+
+test_name: This api returns the node information.formation
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Both CurrentBlockHeight and HeaderHash are changing frequently.
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "seele_getInfo"
+        params: "[]"
+        id: 1
+
+      method: POST
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200
+      body:
+        jsonrpc: '2.0'
+        id: 1
+        result:
+          Coinbase: '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931'
+          # CurrentBlockHeight: 12448
+          # HeaderHash: '0x0000005f9818fbd90c1f4435ed4b5451fe703a0246576b9670855de43be2ae19'
+          Shard: 1
+          MinerStatus: 'Running'

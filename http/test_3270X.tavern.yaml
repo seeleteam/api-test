@@ -1,0 +1,29 @@
+# test_32600.tavern.yaml
+
+---
+
+test_name: Invalid method name
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Invalid method name
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "debug_getTxPoolTxCount"
+        params: []
+
+      method: POST
+      headers:
+        content-type: application/json
+
+    response:
+      status_code: 200
+      body:
+        jsonrpc: '2.0'
+        error:
+          code: -32700
+          message: "missing request id"

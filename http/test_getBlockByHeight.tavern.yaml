@@ -1,0 +1,39 @@
+# test_getBlockByHeight.tavern.yaml
+
+---
+
+test_name: This method is used to obtain the block content based on block height.
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Both CurrentBlockHeight and HeaderHash are changing frequently.
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "seele_getBlockByHeight"
+        params:
+          - 10368
+          - true
+        id: 1
+
+      method: POST
+      headers:
+        content-type: application/json
+
+
+    response:
+      status_code: 200
+      body:
+        jsonrpc: '2.0'
+        id: 1
+        result:
+          debts: []
+          hash: "0x000002dbbe5ed3d36b7ae3e1d3f9a3a5191aaaf1db740afa68b4db2ff355bc79"
+          header:
+            PreviousBlockHash: "0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0"
+            # Creator: "0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931"
+            # StateHash: "0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca"
+            # TxHash: "0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295"
