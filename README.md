@@ -33,3 +33,10 @@ to notice developer as soon as test finished. you should set your email.
 
     export MAIL_ADDR=<your-email@xxx.com>
     export MAIL_PASSWD=<your-email-password>
+
+### Run on docker
+
+	docker build -t my-test-server .
+	docker run -it --rm --name my-running-app my-test-server
+	# or run it in daemon mode
+	docker run -d --rm --name my-running-app my-test-server
