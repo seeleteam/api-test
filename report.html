@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 04-Dec-2018 at 15:58:16 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 05-Dec-2018 at 17:46:38 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,7 +251,7 @@ function filter_table(elem) {
         <td>Python</td>
         <td>2.7.10</td></tr></table>
     <h2>Summary</h2>
-    <p>13 tests ran in 1.87 seconds. </p>
+    <p>13 tests ran in 1.67 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">13 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -266,8 +266,34 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">http/test_32000.tavern.yaml::gas price is nil</td>
+          <td class="col-duration">0.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">http/test_32602.tavern.yaml::missing value for required argument 1</td>
+          <td class="col-duration">0.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'id']) (expected = '{'jsonrpc': '2.0', 'error': {'message': 'missing value for required argument 1', 'code': -32602}}', actual = '{u'jsonrpc': u'2.0', u'id': 1, u'error': {u'message': u'missing value for required argument 1', u'code': -32602}}')
+Traceback (most recent call last):
+  File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
+    assert actual_val == expected_val
+AssertionError: assert {'error': {'c...onrpc': '2.0'} == {'error': {'co...onrpc': '2.0'}
+  Omitting 2 identical items, use -vv to show
+  Left contains more items:
+  {u'id': 1}
+  Use -v to get the full diff</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">http/test_3260X.tavern.yaml::Invalid method name</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -276,15 +302,6 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_3270X.tavern.yaml::Invalid method name</td>
-          <td class="col-duration">0.10</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">http/test_addTx.tavern.yaml::This method submits a transaction to the node.</td>
           <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
@@ -294,7 +311,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getAccountNonce.tavern.yaml::This method is used to obtain the account nonce.</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -303,7 +320,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getBalance.tavern.yaml::This method returns the account balance.</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -312,42 +329,43 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getBlock.tavern.yaml::This method is used to obtain the block content based on block height or block hash.</td>
-          <td class="col-duration">0.12</td>
+          <td class="col-duration">0.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'totalDifficulty', u'txDebts', u'transactions']) (expected["result"] = '{'header': {'StateHash': '0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', 'PreviousBlockHash': '0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', 'TxHash': '0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', 'Creator': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931'}, 'debts': [], 'hash': '0x000002dbbe5ed3d36b7ae3e1d3f9a3a5191aaaf1db740afa68b4db2ff355bc79'}', actual["result"] = '{u'hash': u'0x000002dbbe5ed3d36b7ae3e1d3f9a3a5191aaaf1db740afa68b4db2ff355bc79', u'transactions': [{u'hash': u'0xeb6d822ff382817596c53b5376db6af3cc16304f916a21940a0aeef670fddd72', u'gasLimit': 0, u'to': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'amount': 150000000, u'accountNonce': 0, u'from': u'0x0000000000000000000000000000000000000000', u'payload': u'', u'gasPrice': 0}], u'debts': [], u'header': {u'StateHash': u'0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', u'PreviousBlockHash': u'0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', u'Creator': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'ExtraData': u'', u'Height': 10368, u'Consensus': 0, u'Difficulty': 3643800, u'TxHash': u'0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', u'CreateTimestamp': 1543449986, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0xb6cd9f2a79aff34fb4fd14cce9fb818e061ca4b842c2dc8d5a2e41c26c9df156', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'NDAyNDA4OTQxMTI1NzU0MjQ2Ng=='}, u'txDebts': [], u'totalDifficulty': 41547424320}')
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'totalDifficulty', u'txDebts', u'transactions']) (expected["result"] = '{'header': {'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}, 'debts': [], 'hash': '0x000001867f418a222735aa576b89f640f14c206621522f182848c095b6d38597'}', actual["result"] = '{u'hash': u'0x000001867f418a222735aa576b89f640f14c206621522f182848c095b6d38597', u'transactions': [{u'hash': u'0xed6de14ab8206c52376eacf719b320cf210d2afd4894e4e858f2376f5f4a020f', u'gasLimit': 0, u'to': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'amount': 150000000, u'accountNonce': 0, u'from': u'0x0000000000000000000000000000000000000000', u'payload': u'', u'gasPrice': 0}], u'debts': [], u'header': {u'StateHash': u'0x2629b200fa1a23596e2ec2991e5241c3cd62fdf95b0179c86ba9c7edf71f8476', u'PreviousBlockHash': u'0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f', u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'ExtraData': u'', u'Height': 1, u'Consensus': 0, u'Difficulty': 8000000, u'TxHash': u'0xc79705f02bf0245ec06d0989ef0a9d05105bedb74f23a12ac03845540c184e03', u'CreateTimestamp': 1543287751, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0x80215b141153f63b3e7f30f14d939dd0df99c201dcd1f79df389f5feecef1638', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'MjU0MDY0MDY4NzY3MTkzMTAwOQ=='}, u'txDebts': [], u'totalDifficulty': 16000000}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'debts': [],...47424320, ...} == {'debts': [], ...9a8fbf98295'}}
+AssertionError: assert {'debts': [],...16000000, ...} == {'debts': [], ...1d1eed8d30f'}}
   Omitting 2 identical items, use -vv to show
   Differing items:
-  {'header': {'Consensus': 0, 'CreateTimestamp': 1543449986, 'Creator': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', 'DebtHash': '0x0000000000000000000000000000000000000000000000000000000000000000', ...}} != {'header': {'Creator': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', 'PreviousBlockHash': '0x0000041658ae95e8737dfae3d...22876c0636809c06809030654a55e95bf1ca', 'TxHash': '0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295'}}
+  {'header': {'Consensus': 0, 'CreateTimestamp': 1543287751, 'Creator': '0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', 'DebtHash': '0x0000000000000000000000000000000000000000000000000000000000000000', ...}} != {'header': {'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}}
   Left contains more items:
-  {u'totalDifficulty': 41547424320,
-   u'transact...
+  {u'totalDifficulty': 16000000,
+   u'transactions': [{u'accountNonce': 0,
+                      u'amount': 150000000,...
   
-  ...Full output truncated (10 lines hidden), use '-vv' to show
-dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'ExtraData', u'Height', u'Consensus', u'Difficulty', u'CreateTimestamp', u'TxDebtHash', u'ReceiptHash', u'DebtHash', u'Witness']) (expected["result"]["header"] = '{'StateHash': '0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', 'PreviousBlockHash': '0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', 'TxHash': '0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', 'Creator': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931'}', actual["result"]["header"] = '{u'StateHash': u'0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', u'PreviousBlockHash': u'0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', u'Creator': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'ExtraData': u'', u'Height': 10368, u'Consensus': 0, u'Difficulty': 3643800, u'TxHash': u'0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', u'CreateTimestamp': 1543449986, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0xb6cd9f2a79aff34fb4fd14cce9fb818e061ca4b842c2dc8d5a2e41c26c9df156', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'NDAyNDA4OTQxMTI1NzU0MjQ2Ng=='}')
+  ...Full output truncated (9 lines hidden), use '-vv' to show
+dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'StateHash', u'Creator', u'ExtraData', u'Height', u'Consensus', u'Difficulty', u'TxHash', u'CreateTimestamp', u'TxDebtHash', u'ReceiptHash', u'DebtHash', u'Witness']) (expected["result"]["header"] = '{'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}', actual["result"]["header"] = '{u'StateHash': u'0x2629b200fa1a23596e2ec2991e5241c3cd62fdf95b0179c86ba9c7edf71f8476', u'PreviousBlockHash': u'0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f', u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'ExtraData': u'', u'Height': 1, u'Consensus': 0, u'Difficulty': 8000000, u'TxHash': u'0xc79705f02bf0245ec06d0989ef0a9d05105bedb74f23a12ac03845540c184e03', u'CreateTimestamp': 1543287751, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0x80215b141153f63b3e7f30f14d939dd0df99c201dcd1f79df389f5feecef1638', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'MjU0MDY0MDY4NzY3MTkzMTAwOQ=='}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'Consensus':...0000000', ...} == {'Creator': '0...59a8fbf98295'}
-  Omitting 4 identical items, use -vv to show
+AssertionError: assert {'Consensus':...0000000', ...} == {'PreviousBloc...e1d1eed8d30f'}
+  Omitting 1 identical items, use -vv to show
   Left contains more items:
   {u'Consensus': 0,
-   u'CreateTimestamp': 1543449986,
+   u'CreateTimestamp': 1543287751,
+   u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831',
    u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000',
-   u'Difficulty': 3643800,
-   u'ExtraData': u'',...
+   u'Difficulty': 8000000,...
   
-  ...Full output truncated (6 lines hidden), use '-vv' to show</div></td></tr></tbody>
+  ...Full output truncated (9 lines hidden), use '-vv' to show</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getBlockByHash.tavern.yaml::This method is used to obtain the block content based on block hash.</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -356,87 +374,78 @@ AssertionError: assert {'Consensus':...0000000', ...} == {'Creator': '0...59a8fb
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getBlockByHeight.tavern.yaml::This method is used to obtain the block content based on block height.</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'totalDifficulty', u'txDebts', u'transactions']) (expected["result"] = '{'header': {'PreviousBlockHash': '0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0'}, 'debts': [], 'hash': '0x000002dbbe5ed3d36b7ae3e1d3f9a3a5191aaaf1db740afa68b4db2ff355bc79'}', actual["result"] = '{u'hash': u'0x000002dbbe5ed3d36b7ae3e1d3f9a3a5191aaaf1db740afa68b4db2ff355bc79', u'transactions': [{u'hash': u'0xeb6d822ff382817596c53b5376db6af3cc16304f916a21940a0aeef670fddd72', u'gasLimit': 0, u'to': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'amount': 150000000, u'accountNonce': 0, u'from': u'0x0000000000000000000000000000000000000000', u'payload': u'', u'gasPrice': 0}], u'debts': [], u'header': {u'StateHash': u'0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', u'PreviousBlockHash': u'0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', u'Creator': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'ExtraData': u'', u'Height': 10368, u'Consensus': 0, u'Difficulty': 3643800, u'TxHash': u'0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', u'CreateTimestamp': 1543449986, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0xb6cd9f2a79aff34fb4fd14cce9fb818e061ca4b842c2dc8d5a2e41c26c9df156', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'NDAyNDA4OTQxMTI1NzU0MjQ2Ng=='}, u'txDebts': [], u'totalDifficulty': 41547424320}')
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'totalDifficulty', u'txDebts', u'transactions']) (expected["result"] = '{'header': {'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}, 'debts': [], 'hash': '0x000001867f418a222735aa576b89f640f14c206621522f182848c095b6d38597'}', actual["result"] = '{u'hash': u'0x000001867f418a222735aa576b89f640f14c206621522f182848c095b6d38597', u'transactions': [{u'hash': u'0xed6de14ab8206c52376eacf719b320cf210d2afd4894e4e858f2376f5f4a020f', u'gasLimit': 0, u'to': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'amount': 150000000, u'accountNonce': 0, u'from': u'0x0000000000000000000000000000000000000000', u'payload': u'', u'gasPrice': 0}], u'debts': [], u'header': {u'StateHash': u'0x2629b200fa1a23596e2ec2991e5241c3cd62fdf95b0179c86ba9c7edf71f8476', u'PreviousBlockHash': u'0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f', u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'ExtraData': u'', u'Height': 1, u'Consensus': 0, u'Difficulty': 8000000, u'TxHash': u'0xc79705f02bf0245ec06d0989ef0a9d05105bedb74f23a12ac03845540c184e03', u'CreateTimestamp': 1543287751, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0x80215b141153f63b3e7f30f14d939dd0df99c201dcd1f79df389f5feecef1638', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'MjU0MDY0MDY4NzY3MTkzMTAwOQ=='}, u'txDebts': [], u'totalDifficulty': 16000000}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'debts': [],...47424320, ...} == {'debts': [], ...76cb76146e0'}}
+AssertionError: assert {'debts': [],...16000000, ...} == {'debts': [], ...1d1eed8d30f'}}
   Omitting 2 identical items, use -vv to show
   Differing items:
-  {'header': {'Consensus': 0, 'CreateTimestamp': 1543449986, 'Creator': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', 'DebtHash': '0x0000000000000000000000000000000000000000000000000000000000000000', ...}} != {'header': {'PreviousBlockHash': '0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0'}}
+  {'header': {'Consensus': 0, 'CreateTimestamp': 1543287751, 'Creator': '0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', 'DebtHash': '0x0000000000000000000000000000000000000000000000000000000000000000', ...}} != {'header': {'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}}
   Left contains more items:
-  {u'totalDifficulty': 41547424320,
+  {u'totalDifficulty': 16000000,
    u'transactions': [{u'accountNonce': 0,
                       u'amount': 150000000,...
   
   ...Full output truncated (9 lines hidden), use '-vv' to show
-dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'StateHash', u'Creator', u'ExtraData', u'Height', u'Consensus', u'Difficulty', u'TxHash', u'CreateTimestamp', u'TxDebtHash', u'ReceiptHash', u'DebtHash', u'Witness']) (expected["result"]["header"] = '{'PreviousBlockHash': '0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0'}', actual["result"]["header"] = '{u'StateHash': u'0x60ab615b3010eb7f35cdc85e811b22876c0636809c06809030654a55e95bf1ca', u'PreviousBlockHash': u'0x0000041658ae95e8737dfae3dd968398846dd380c7c145379178276cb76146e0', u'Creator': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'ExtraData': u'', u'Height': 10368, u'Consensus': 0, u'Difficulty': 3643800, u'TxHash': u'0xe800199189634548e10c97e7cc70f79623f0740b4f19872fcf1559a8fbf98295', u'CreateTimestamp': 1543449986, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0xb6cd9f2a79aff34fb4fd14cce9fb818e061ca4b842c2dc8d5a2e41c26c9df156', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'NDAyNDA4OTQxMTI1NzU0MjQ2Ng=='}')
+dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'StateHash', u'Creator', u'ExtraData', u'Height', u'Consensus', u'Difficulty', u'TxHash', u'CreateTimestamp', u'TxDebtHash', u'ReceiptHash', u'DebtHash', u'Witness']) (expected["result"]["header"] = '{'PreviousBlockHash': '0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f'}', actual["result"]["header"] = '{u'StateHash': u'0x2629b200fa1a23596e2ec2991e5241c3cd62fdf95b0179c86ba9c7edf71f8476', u'PreviousBlockHash': u'0xb6cd00c008ddb4c9d1626ea9d3c21c6b1c404bb384a25d224573e1d1eed8d30f', u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'ExtraData': u'', u'Height': 1, u'Consensus': 0, u'Difficulty': 8000000, u'TxHash': u'0xc79705f02bf0245ec06d0989ef0a9d05105bedb74f23a12ac03845540c184e03', u'CreateTimestamp': 1543287751, u'TxDebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'ReceiptHash': u'0x80215b141153f63b3e7f30f14d939dd0df99c201dcd1f79df389f5feecef1638', u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000', u'Witness': u'MjU0MDY0MDY4NzY3MTkzMTAwOQ=='}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'Consensus':...0000000', ...} == {'PreviousBloc...276cb76146e0'}
+AssertionError: assert {'Consensus':...0000000', ...} == {'PreviousBloc...e1d1eed8d30f'}
   Omitting 1 identical items, use -vv to show
   Left contains more items:
   {u'Consensus': 0,
-   u'CreateTimestamp': 1543449986,
-   u'Creator': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931',
+   u'CreateTimestamp': 1543287751,
+   u'Creator': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831',
    u'DebtHash': u'0x0000000000000000000000000000000000000000000000000000000000000000',
-   u'Difficulty': 3643800,...
+   u'Difficulty': 8000000,...
   
   ...Full output truncated (9 lines hidden), use '-vv' to show</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_getBlockHeight.tavern.yaml::This method is used to obtain the height of the blockchain.</td>
-          <td class="col-duration">0.16</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'result']) (expected = '{'jsonrpc': '2.0', 'id': 1}', actual = '{u'jsonrpc': u'2.0', u'id': 1, u'result': 43032}')
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'result']) (expected = '{'jsonrpc': '2.0', 'id': 1}', actual = '{u'jsonrpc': u'2.0', u'id': 1, u'result': 49508}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'id': 1, 'js...esult': 43032} == {'id': 1, 'jsonrpc': '2.0'}
+AssertionError: assert {'id': 1, 'js...esult': 49508} == {'id': 1, 'jsonrpc': '2.0'}
   Omitting 2 identical items, use -vv to show
   Left contains more items:
-  {u'result': 43032}
+  {u'result': 49508}
   Use -v to get the full diff</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">http/test_getInfo.tavern.yaml::This api returns the node information.formation</td>
-          <td class="col-duration">0.12</td>
+          <td class="col-name">http/test_getInfo.tavern.yaml::This method returns the node information.</td>
+          <td class="col-duration">0.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'CurrentBlockHeight', u'HeaderHash']) (expected["result"] = '{'Coinbase': '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', 'MinerStatus': 'Running', 'Shard': 1}', actual["result"] = '{u'Coinbase': u'0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931', u'CurrentBlockHeight': 43032, u'MinerStatus': u'Running', u'Shard': 1, u'HeaderHash': u'0x00000044cd0022b767384c42f7b7a5d8864a180cb795ba09ac5460683aa2c900'}')
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>dict_util.py               292 WARNING  Structure of returned data was different than expected  - Extra keys in response: set([u'CurrentBlockHeight', u'HeaderHash']) (expected["result"] = '{'Coinbase': '0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', 'MinerStatus': 'Running', 'Shard': 2}', actual["result"] = '{u'Coinbase': u'0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831', u'CurrentBlockHeight': 49508, u'MinerStatus': u'Running', u'Shard': 2, u'HeaderHash': u'0x000001253f7c536057dcdd488ece269d834216fb587b1a09b669d47405f06277'}')
 Traceback (most recent call last):
   File "/Users/frank/venv/testEnv/lib/python2.7/site-packages/tavern/util/dict_util.py", line 259, in check_keys_match_recursive
     assert actual_val == expected_val
-AssertionError: assert {'Coinbase': ...Running', ...} == {'Coinbase': '...', 'Shard': 1}
+AssertionError: assert {'Coinbase': ...Running', ...} == {'Coinbase': '...', 'Shard': 2}
   Omitting 3 identical items, use -vv to show
   Left contains more items:
-  {u'CurrentBlockHeight': 43032,
-   u'HeaderHash': u'0x00000044cd0022b767384c42f7b7a5d8864a180cb795ba09ac5460683aa2c900'}
+  {u'CurrentBlockHeight': 49508,
+   u'HeaderHash': u'0x000001253f7c536057dcdd488ece269d834216fb587b1a09b669d47405f06277'}
   Use -v to get the full diff</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">http/test_getTPS.tavern.yaml::This method returns TPS of seele node.</td>
-          <td class="col-duration">0.11</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_nodeInfo.tavern.yaml::This method returns the node information of the node</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-duration">0.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -445,7 +454,7 @@ AssertionError: assert {'Coinbase': ...Running', ...} == {'Coinbase': '...', 'Sh
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">http/test_nodeStats.tavern.yaml::This method returns the information of the node</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

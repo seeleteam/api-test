@@ -2,7 +2,7 @@
 
 ---
 
-test_name: This api returns the node information.formation
+test_name: This method returns the node information.
 
 includes:
   - !include common.yaml
@@ -26,8 +26,8 @@ stages:
         jsonrpc: '2.0'
         id: 1
         result:
-          Coinbase: '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931'
+          Coinbase: '{node.Coinbase:s}'
           # CurrentBlockHeight: 12448
           # HeaderHash: '0x0000005f9818fbd90c1f4435ed4b5451fe703a0246576b9670855de43be2ae19'
-          Shard: 1
+          Shard: 2
           MinerStatus: 'Running'

@@ -6,6 +6,9 @@ This repository aims to test [go-seele](https://github.com/seeleteam/go-seele). 
 * ![](http://progressed.io/bar/0?title=tcp-api)
 * ![](http://progressed.io/bar/100?title=cli-api)
 
+An independent reporisity for [cli-api](https://github.com/seeleteam/e2e-blackbox). it's name is  *e2e-blackbox*.
+
+
 ### Prepare your environment
 
 	virtualenv ~/testEnv
@@ -40,3 +43,12 @@ to notice developer as soon as test finished. you should set your email.
 	docker run -it --rm --name my-running-app my-test-server
 	# or run it in daemon mode
 	docker run -d --rm --name my-running-app my-test-server
+	
+
+### How to trigger
+
+To fire up your test case, there are three way to reach that.
+
+* 1. scheduler job
+* 2. monitor the commit of the reporisity by developer.
+* 3. manual trigger
