@@ -7,3 +7,6 @@ variables:
     proto: http
     host: 117.50.16.154
     port: 8000
+
+  node:
+    Coinbase: '0x0ea2a45ab5a909c309439b0e004c61b7b2a3e831'

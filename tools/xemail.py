@@ -39,5 +39,5 @@ def send_mail(send_to, subject, text, files=None):
 
 if __name__ == '__main__':
     outputFilename = 'report.pdf'
-    to_addr = [ "804048353@qq.com", "2596416750@qq.com", "1063489610@qq.com"]
+    to_addr = [ "someone@gmail.com", "123@sina.com"]
     send_mail(to_addr, 'sss','xxxx', [outputFilename, ])

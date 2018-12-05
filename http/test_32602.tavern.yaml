@@ -1,23 +1,20 @@
-# test_getBalance.tavern.yaml
+# test_32602.tavern.yaml
 
 ---
-
-test_name: This method returns the account balance.
+test_name: missing value for required argument 1
 
 includes:
   - !include common.yaml
 
 stages:
-  - name: Invalid wallet address test
+  - name: missing value for required argument 1
     request:
       url: "{service.proto:s}://{service.host:s}:{service.port:d}"
       json:
         jsonrpc: "2.0"
         method: "seele_getBalance"
         params:
-          - "0x50cf4e5dfb9a986f91366adf02cb7e6119cffed1"
-          - ""
-          - 1
+          - '{node.Coinbase:s}'
         id: 1
 
       method: POST
@@ -28,7 +25,6 @@ stages:
       status_code: 200
       body:
         jsonrpc: '2.0'
-        id: 1
-        result:
-          Account: "0x50cf4e5dfb9a986f91366adf02cb7e6119cffed1"
-          Balance: 0
+        error:
+          code: -32602
+          message: "missing value for required argument 1"

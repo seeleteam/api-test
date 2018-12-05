@@ -21,6 +21,8 @@ stages:
       headers:
         content-type: application/json
 
+
+
     response:
       status_code: 200
       body:
@@ -28,7 +30,7 @@ stages:
         id: 1
         result:
           name: "Test monitor"
-          node: "seele node1"
+          node: "seele node2"
           port: 0
           netVersion: "1.0"
           protocol: "1.0"
@@ -37,4 +39,4 @@ stages:
           os_v: "amd64"
           client: "1.0"
           canUpdateHistory: true
-          shard: 1
+          shard: 2
