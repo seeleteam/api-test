@@ -49,6 +49,54 @@ to notice developer as soon as test finished. you should set your email.
 
 To fire up your test case, there are three way to reach that.
 
-* 1. scheduler job
-* 2. monitor the commit of the reporisity by developer.
-* 3. manual trigger
+* scheduler job
+* monitor the commit of the reporisity by developer.
+* manual trigger
+
+
+### API's List
+
+| HTTP | WS | TCP | CLI| Status|
+|------|----|-----|----|-------|
+| seele_getInfo | -| -| getinfo| ✔︎ |
+| seele_getAccountNonce| -| -| getnonce|
+| seele_getBlockHeight| - | -| getblockheight| ✔︎ |
+| seele_getBlock| - | -| getblock| ✔︎ |
+| seele_call| - | -| call| ✔︎ |
+| seele_getBlockByHeight|-|-|-| ✔︎ |
+| seele_getBlockByHash|-|-| getdebtbyhash|✔︎ |
+| monitor_nodeInfo|-|-|getinfo|✔︎ |
+| monitor_nodeStats|-|-|-|✔︎ |
+| seele_getBalance|-|-|getbalance|✔︎ |
+
+
+### Deprecated API
+
+* debug_getTPS
+* debug_dumpHeap
+* network_getProtocolVersion
+* network_getPeersInfo
+* network_getPeerCount
+* network_getNetVersion
+* network_getNetworkID
+* miner_start
+* miner_stop
+* miner_status
+* miner.GetCoinbase
+* miner_setThreads
+* miner_setcoinbase
+* miner_getEngineInfo
+* debug_printBlock
+* debug_getTxPoolContent
+* debug_getTxPoolTxCount
+* debug_getPendingTransactions
+* debug_getPendingDebts
+* debug_dumpHeap
+* download_getStatus
+
+ 
+
+### Hard to test API
+
+* seele_addTx
+* 

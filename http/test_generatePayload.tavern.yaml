@@ -1,0 +1,49 @@
+# # test_getBalance.tavern.yaml
+#
+# ---
+#
+# test_name: This method is used to execute a given transaction
+#           on a statedb of a given block height. It does not affect
+#           the statedb or blockchain and is useful for executing and
+#           retrieving values. However, the height currently does not
+#           support optional and will remove the from parameter in the
+#           next version or more.
+#
+# includes:
+#   - !include common.yaml
+#
+# stages:
+#   - name: Invalid wallet address test
+#     request:
+#       url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+#       json:
+#         jsonrpc: "2.0"
+#         method: "seele_generatePayload"
+#         params:
+#           -  {"jsonrpc":"2.0","method":"seele_generatePayload","params":["[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}]", "set", ["1"]],"id":1}
+#           # - "[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}]"
+#             # - constant: false
+#             #   inputs:
+#             #     - name: "x"
+#             #       type: "uint256"
+#             #   name: "set"
+#             #   outputs: []
+#             #   payable: false
+#             #   stateMutability: "nonpayable"
+#             #   type: "function"
+#           # - "[]"
+#           # - "set"
+#           # - ["1"]
+#         id: 1
+#
+#       method: POST
+#       headers:
+#         content-type: application/json
+#
+#
+#     response:
+#       status_code: 200
+#       body:
+#         jsonrpc: '2.0'
+#         id: 1
+#         result: "0x60fe47b10000000000000000000000000000000000000000000000000000000000000001"

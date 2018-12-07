@@ -1,0 +1,45 @@
+# test_getBalance.tavern.yaml
+
+---
+
+test_name: This method is used to execute a given transaction
+          on a statedb of a given block height. It does not affect
+          the statedb or blockchain and is useful for executing and
+          retrieving values. However, the height currently does not
+          support optional and will remove the from parameter in the
+          next version or more.
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Invalid wallet address test
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "seele_call"
+        params:
+          - "0x9df8ed11ea024183bd584480e80952c9b04e0122"
+          - "0x6d4ce63c"
+          - -1
+        id: 1
+
+      method: POST
+      headers:
+        content-type: application/json
+
+
+    response:
+      status_code: 200
+      body:
+        jsonrpc: '2.0'
+        id: 1
+        result:
+          contract: "0x"
+          failed: false
+          # poststate: "0xaf42177c33d8029a1b249a6f463bf35c975ea8550e2baace8f818ccc670e5d8f"
+          result: "0x"
+          totalFee: 42544
+          # txhash: "0x0bd24b0183c997ce1adad48184c4fc9c2e8d4cefa43b94f3cf87793d49359dd5"
+          usedGas: 42544

@@ -4,11 +4,11 @@ test_name: Test mqtt message response
 
 
 paho-mqtt: &mqtt_spec
-  # tls:
-  #   enable: true
+  tls:
+    enable: true
   connect:
-    host: 117.50.16.154
-    port: 8000
+    host: iot.eclipse.org
+    port: 80
     timeout: 3
   client:
     transport: websockets
@@ -26,15 +26,11 @@ paho-mqtt: &mqtt_spec
 stages:
   - name: step 1 - ping/pong
     mqtt_publish:
-      topic: /device/123/ping
-      json:
-        jsonrpc: "2.0"
-        method: "seele_getInfo"
-        params: [],
-        id: 1
+      topic: paho/test/single
+      payload: "payload"
 
     mqtt_response:
-      topic: /device/123/pong
-      # payload: pong
+      topic: paho/test/single
+      payload: "payload"
       timeout: 5
-      # qos: 1
+      qos: 1
