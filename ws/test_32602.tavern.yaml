@@ -1,0 +1,30 @@
+# test_32602.tavern.yaml
+
+---
+test_name: missing value for required argument 1
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: missing value for required argument 1
+    request:
+      url: "{service.proto:s}://{service.host:s}:{service.port:d}"
+      json:
+        jsonrpc: "2.0"
+        method: "seele_getBalance"
+        params:
+          - '{node.Coinbase:s}'
+        id: 1
+
+      method: POST
+      headers:
+        content-type: application/json
+
+    response:
+      status_code: 200
+      body:
+        jsonrpc: '2.0'
+        error:
+          code: -32602
+          message: "missing value for required argument 1"
