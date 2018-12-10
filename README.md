@@ -25,9 +25,18 @@ Simply test me
     py.test http/test_*
 
 
-Generates a HTML report for the test results
-
+Generates a HTML report for the test results.
+	
+	# for http only
     py.test --html=report.html http/test_*
+	# for websocket only
+	gunicorn --bind 0.0.0.0:5000 ws2http:app # a middleware for access node by websocket.
+	py.test --html=report.html ws/test_*
+	
+	
+Send the result to someone, who care about it by email.
+	python main.py
+
 
 ### Automation testing
 

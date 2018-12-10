@@ -1,0 +1,13 @@
+---
+name: test includes
+description: used for testing against local server
+
+variables:
+  service:
+    proto: http
+    host: 127.0.0.1
+    port: 5000
+
+  node:
+    Coinbase: '0xe2bbc9fadb4c9d78ad2da944ccb408ff55de3931'
+    Shard: 1
