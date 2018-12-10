@@ -2,7 +2,7 @@
 This repository aims to test [go-seele](https://github.com/seeleteam/go-seele). basically it includes the following three types of testing.
 
 * ![](http://progressed.io/bar/50?title=http-api)
-* ![](http://progressed.io/bar/0?title=ws-api)
+* ![](http://progressed.io/bar/50?title=ws-api)
 * ![](http://progressed.io/bar/0?title=tcp-api)
 * ![](http://progressed.io/bar/100?title=cli-api)
 
