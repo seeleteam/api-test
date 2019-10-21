@@ -32,7 +32,7 @@ scandir==1.9.0
 six==1.11.0
 stevedore==1.30.0
 tavern==0.20.0
-urllib3==1.24.1
+urllib3==1.24.2
 webencodings==0.5.1
 wheel==0.24.0
 wkhtmltopdf==0.2
