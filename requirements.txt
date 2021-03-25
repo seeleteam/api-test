@@ -25,7 +25,7 @@ pytest-html==1.19.0
 pytest-metadata==1.7.0
 python-box==3.2.3
 python-dateutil==2.7.5
-PyYAML==3.13
+PyYAML==5.4
 reportlab==3.5.12
 requests==2.20.1
 scandir==1.9.0
