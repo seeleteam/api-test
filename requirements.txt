@@ -19,7 +19,7 @@ pluggy==0.8.0
 py==1.7.0
 PyJWT==1.6.4
 pykwalify==1.7.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytest==4.0.1
 pytest-html==1.19.0
 pytest-metadata==1.7.0
