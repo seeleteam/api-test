@@ -26,7 +26,7 @@ pytest-metadata==1.7.0
 python-box==3.2.3
 python-dateutil==2.7.5
 PyYAML==3.13
-reportlab==3.5.12
+reportlab==3.5.55
 requests==2.20.1
 scandir==1.9.0
 six==1.11.0
